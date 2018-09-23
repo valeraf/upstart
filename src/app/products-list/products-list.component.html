@@ -1,0 +1,17 @@
+<div [ngClass]="{loading: productsService.loading$ | async}" class="products-list-container">
+  <div class="page-header">
+    <div class="top-toolbar">
+      <app-pagination></app-pagination>
+    </div>
+    <h1 class="page-title">Category Name</h1>
+  </div>
+  <div class="products-list">
+    <app-product-list-item
+      *ngFor="let item of productsService.items$ | async"
+      [item]="item"
+    >
+    </app-product-list-item>
+  </div>
+  <app-pagination></app-pagination>
+  <app-quickview></app-quickview>
+</div>

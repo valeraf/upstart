@@ -1,0 +1,41 @@
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    margin-bottom: 16px;
+}
+
+.products-list-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.loading:before {
+    content: "Loading...";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #ffffff;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.top-toolbar {
+    float: right;
+    padding-top: 12px;
+}
+
+.page-header h1 {
+    overflow: hidden;
+}
+
+.page-title {
+    overflow: hidden;
+    font-size: 30px;
+    margin: 0 0 20px;
+}

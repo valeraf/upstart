@@ -1,0 +1,19 @@
+<div
+  class="quickview-wrapper"
+  [@visibilityChanged]="show"
+>
+  <div class="quickview" *ngIf="quickview">
+    <div class="quickview-left">
+      <img [src]="'https://www.croma.com' + quickview.item.images[1].url" [alt]="quickview.item.name">
+    </div>
+    <div class="quickview-right">
+      <h2>{{ quickview.item.name }}</h2>
+      <div class="quickview-info" *ngIf="quickview.item.quickviewdesc">
+        <div><strong>Key Features:</strong></div>
+        <div [innerHTML]="quickview.item.quickviewdesc"></div>
+      </div>
+    </div>
+    <div class="close" (click)="onClose()">X</div>
+  </div>
+  <div class="quickview-overlay" (click)="onClose()"></div>
+</div>

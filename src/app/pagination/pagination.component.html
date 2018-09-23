@@ -1,0 +1,12 @@
+<div class="pagination" *ngIf="pagesArray.length > 0">
+  <div>Pagination:</div>
+  <ul>
+    <li
+      *ngFor="let pager of pagesArray; index as i"
+      [ngClass]="{active: paginationData.currentPage === i}"
+      (click)="onPageClicked(i+1)"
+    >
+      {{ i+1 }}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,9 @@
+<div class="item-container">
+  <div class="quickview" (click)="onQuickView()">Quick View</div>
+  <div class="item-thumb">
+    <img [src]="'https://www.croma.com' + item.images[0].url" [alt]="item.name"/>
+  </div>
+  <div class="item-name">{{ item.name }}</div>
+  <div class="item-price">{{ item.price.formattedValue }}</div>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
